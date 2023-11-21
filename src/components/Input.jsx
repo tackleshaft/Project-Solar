@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Input = () => {
+const Input = (props) => {
+    const { handleClick } = props
 
     return(
         <div>
@@ -8,7 +9,7 @@ const Input = () => {
         <form> 
           <label htmlFor="location">City: </label>
           <input id="location-value" type='text'></input>
-          <input type='button' value="Add Market" onClick={handleClick} ></input>
+          <input type='button' value="Search City" onClick={handleClick}></input>
         </form>
       </div>
     )

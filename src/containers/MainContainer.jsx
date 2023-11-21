@@ -7,12 +7,32 @@ import CityContainer from './CityContainer.jsx';
 
 const MainContainer = () => {
 
+    const[Cities, updateCities] = useState([{
+        cityName: 'Denver',
+        annual: 6.06,
+        },])
+
+    const handleClick = (submitData) => {
+        //takes the data, excutes a fetch requeset with the info
+        console.log('You clicked the button!')
+        // () => {fetch(appropriateURL)
+        // .then((data) => data.json())
+        // .then((data) =>{
+        //     const avgDNI = data.outputs.avg_dni.annual
+        //     updateCities({cityName: 'newCity', avgDNI})
+        // })
+        }
+
 
     return(
         <div>
             <h1>Solar Farm Output</h1>
-            {/* <Input />
-            <CityContainer /> */}
+            <Input 
+                handleClick={handleClick}
+                />
+            <CityContainer 
+                city={Cities}
+            />
         </div>
     )
 

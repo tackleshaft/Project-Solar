@@ -1,13 +1,21 @@
 import React from 'react';
-import City from '../components/City.jsx'
+import City from '../components/city.jsx'
 
 
-const CityContainer = () => {
+const CityContainer = (props) => {
+
+
     return(
         <div>
-        {/* <City /> */}
+            {props.city.map((element, i, array) => 
+            <City 
+                key={`CityIndex ${i}`}
+                cityName={element.cityName}
+                annual={element.annual}
+            />
+            )}
         </div>
     )
 }
 
-export default CityContainer
+export default CityContainer;
