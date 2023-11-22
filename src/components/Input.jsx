@@ -15,16 +15,18 @@ const Input = (props) => {
 
   return (
     <div>
-      <h3>Please Enter a Major City</h3>
+      <h3>Please Enter a Longitude and Lattidue, seperated by a comma.</h3>
+      <p>The DNI values returned are kWh/m2/day (kilowatt hours per square meter per day).</p>
+      <p>The average american home uses 10,800 kWh in a year.</p>
       <form>
-        <label htmlFor="location">City: </label>
+        <label htmlFor="location">Geographic coordinates: </label>
         <input
           id="location-value"
           type="text"
           value={inputCity}
           onChange={handleInputChange}
         />
-        <input type="button" value="Search City" onClick={handleButtonClick} />
+        <input type="button" value="Search Coordinates" onClick={handleButtonClick} />
       </form>
     </div>
   );

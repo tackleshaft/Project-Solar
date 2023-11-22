@@ -10,7 +10,8 @@ const CityContainer = (props) => {
             {props.city.map((element, i, array) => 
             <City 
                 key={`CityIndex ${i}`}
-                cityName={element.cityName}
+                lon={element.lon}
+                lat={element.lat}
                 annual={element.annual}
             />
             )}
