@@ -14,8 +14,9 @@ const Input = (props) => {
   };
 
   return (
-    <div>
-      <h3>Please Enter a Longitude and Lattidue, seperated by a comma.</h3>
+    <div id='inputContainer'>
+      <h3>Please enter a longitude and lattidue, seperated by a comma.</h3>
+      <image src='../Types_of_Irradiance-graphic.pngTypes'></image>
       <p>The DNI values returned are kWh/m2/day (kilowatt hours per square meter per day).</p>
       <p>The average american home uses 10,800 kWh in a year.</p>
       <form>

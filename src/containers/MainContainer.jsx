@@ -29,8 +29,10 @@ const MainContainer = () => {
             const annual = data.outputs.avg_dni.annual
 
             if (data.outputs.avg_dni === 'no data') {
-                console.error('These coordinates do not coorespond  have a solar project.')
+                console.error('These coordinates do not correspond to an existing solar project in the NREL database.')
+                alert('These corrdinates do not coorespond to an existing solar project in the NREL database.')
                 return
+
             }
 
             updateCities((prevCities) => [...prevCities, { lat: lat, lon: lon, annual: annual }])
@@ -43,14 +45,16 @@ const MainContainer = () => {
 
 
     return(
+        <div>
         <div id="outerbox">
-            <h1>Solar Farm Direct Normal Irradiance</h1>
+            <h1>Direct Solar Irradiance by Location</h1>
             <Input 
                 handleClick={handleClick}
                 />
             <CityContainer 
                 city={Cities}
             />
+        </div>
         </div>
     )
 
