@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path')
 const SolarController = require('./solarcontroller.js')
+// const APIKey = 'QcLk7kdklvQGQxInDgelZ4VXD1CeMTSMqbeNHMox';
 
 const PORT = 3000;
 
@@ -13,6 +14,8 @@ app.get('/', (req, res) => {
     console.log('inside the response object')
     res.sendFile(path.resolve(__dirname, '../src/index.html'));
   });
+
+app.get('')
 
 //intial testing route - simple object response
 app.get('/testing', SolarController.test, (req, res) => res.status(200).json(res.locals.test))

@@ -16,11 +16,11 @@ const MainContainer = () => {
     const handleClick = async (inputCity) => {
         //takes the data, excutes a fetch requeset with the info
         console.log('You clicked the button! Your inputCity is:', inputCity);
-        const url = `/api/solar/solar_resource/v1.json?api_key=${APIKey}&address=${inputCity}`;
+        // const url = `/api/solar/solar_resource/v1.json?api_key=${APIKey}&address=${inputCity}`;
         try{
-            const response = await fetch(url);
+            const response = await fetch('https://developer.nrel.gov/api/alt-fuel-stations/v1.json?limit=1&api_key=QcLk7kdklvQGQxInDgelZ4VXD1CeMTSMqbeNHMox');
             const data = await response.json();
-            const avgDNI = data.outputs.avg_dni.annual
+            // const avgDNI = data.outputs.avg_dni.annual
             console.log(data)
                 // updateCities((prevCities) => [...prevCities, { cityName: inputCity, avgDNI }]))
             }
